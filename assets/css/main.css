@@ -3783,3 +3783,12 @@ input, select, textarea {
 			}
 
 		}
+.profile-pic img {
+    width: min(40vw, 180px);   /* image scales on small screens */
+    aspect-ratio: 1 / 1;       /* always stays a perfect circle */
+    
+    border-radius: 50%;
+    border: 2px solid white;
+    object-fit: cover;
+    display: block;
+}
