@@ -3792,3 +3792,43 @@ input, select, textarea {
     object-fit: cover;
     display: block;
 }
+
+.cta-content {
+    display: flex;
+    align-items: flex-start;    /* aligns video to top of text */
+    justify-content: space-between;
+    gap: 20px;
+    flex-wrap: wrap;            /* allows wrapping on small screens */
+    margin-top: 15px;           /* spacing below header */
+}
+
+.cta-text {
+    flex: 1;
+    min-width: 250px;           /* text doesn’t shrink too much */
+}
+
+.cta-video {
+    flex-shrink: 0;
+}
+
+.video-player {
+    width: 400px;               /* smaller video */
+    aspect-ratio: 16/9;         /* rectangle */
+    border-radius: 10px;        /* round corners, 50% for circle */
+    object-fit: cover;
+}
+
+/* Mobile responsive */
+@media (max-width: 700px) {
+    .cta-content {
+        flex-direction: column;
+        text-align: center;
+        gap: 15px;
+    }
+
+    .video-player {
+        width: 150px;
+        margin: 0 auto;
+    }
+}
+
