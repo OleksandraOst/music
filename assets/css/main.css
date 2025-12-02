@@ -3805,44 +3805,44 @@ input, select, textarea {
     display: block;
 }
 
+/* Контейнер текст + відео */
 .cta-content {
     display: flex;
-    align-items: flex-start;    /* aligns video to top of text */
-    justify-content: space-between;
-    gap: 20px;
-    flex-wrap: wrap;            /* allows wrapping on small screens */
-    margin-top: 15px;           /* spacing below header */
+    justify-content: center;
+    align-items: center;
+    gap: 40px;              /* відстань між текстом і гіфкою */
 }
 
+/* Текст */
 .cta-text {
     flex: 1;
-    min-width: 250px;           /* text doesn’t shrink too much */
 }
 
+/* Відео */
 .cta-video {
-    flex-shrink: 0;
+    flex: 1;
+    display: flex;
+    justify-content: center;
 }
 
 .video-player {
-    width: 400px;               /* smaller video */
-    aspect-ratio: 16/9;         /* rectangle */
-    border-radius: 10px;        /* round corners, 50% for circle */
-    object-fit: cover;
+    width: 100%;
+    max-width: 400px;       /* розмір гіфки на ноуті */
+    border-radius: 12px;
 }
 
-/* Mobile responsive */
-@media (max-width: 700px) {
+/* 📱 На телефонах — один під одним */
+@media (max-width: 768px) {
     .cta-content {
-        flex-direction: column;
-        text-align: center;
-        gap: 15px;
+        flex-direction: column;   /* текст над відео */
+        text-align: center;       /* центрований текст */
     }
 
     .video-player {
-        width: 150px;
-        margin: 0 auto;
+        max-width: 100%;          /* гіфка росте/звужується під екран */
     }
 }
+
 
 /* Контейнер для 2 відео поруч */
 .videos-row {
