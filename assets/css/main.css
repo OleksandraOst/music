@@ -3881,4 +3881,24 @@ input, select, textarea {
   }
 }
 
+.buttons {
+  display: flex;
+  gap: 1rem;              /* space between buttons */
+  justify-content: center;
+}
+
+/* Mobile: stack vertically */
+@media (max-width: 768px) {
+  .buttons {
+    flex-direction: column;
+    align-items: center;
+  }
+}
+
+/* Laptop & up: side by side */
+@media (min-width: 769px) {
+  .buttons {
+    flex-direction: row;
+  }
+}
 
